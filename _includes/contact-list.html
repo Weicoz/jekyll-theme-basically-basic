@@ -12,18 +12,18 @@
     <li>
         <a href="{{ site.baseurl }}?cat={{ category | first }}">
             <span class="label">{{ category | first }} | {{ category | last | size }}</span>
-        <a/>
+        </a>
     </li>
     {% endfor %}
     <li>
         <a href="{{ site.baseurl }}/post/">
             <span class="label">Post</span>
-        <a/>
+        </a>
     </li>
     <li>
         <a href="{{ site.baseurl }}/category/">
             <span class="label">Category</span>
-        <a/>
+        </a>
     </li>
     {% if site.github_username %}
     <li>{% include icon-github.html username=site.github_username label='GitHub' %}</li>
