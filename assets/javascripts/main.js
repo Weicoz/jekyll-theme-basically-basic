@@ -1,6 +1,3 @@
----
----
-
 /*!
  * Basically Basic Jekyll Theme 1.1.3
  * Copyright 2017 Michael Rose - mademistakes | @mmistakes
