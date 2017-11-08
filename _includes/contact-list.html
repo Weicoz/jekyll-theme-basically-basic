@@ -10,7 +10,7 @@
 
     {% for category in site.categories %}
     <li>
-        <a href="{{ site.url }}?cat={{ category | first }}">
+        <a href="{{ site.baseurl }}?cat={{ category | first }}">
             <span class="label">{{ category | first }} | {{ category | last | size }}</span>
         <a/>
     </li>
