@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: + Weicoz Blog's+
+title: + Weicoz Blog's +
 email:
 description:
 baseurl: "/jekyll-theme-basically-basic" # the optional subpath of your site, e.g. "/blog"
