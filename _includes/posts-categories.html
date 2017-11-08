@@ -1,6 +1,6 @@
 <div>
     {% for category in site.categories %}
-    <div class="{{ category | first }}" id="{{ category | first }}" style="display: none;">
+    <div class="{{ category | first }} categories" id="{{ category | first }}" style="display: none;">
         <header class="section-title">
             <h2>{{ category | first }} | {{ category | last | size }}</h2>
         </header>
@@ -20,5 +20,10 @@
     // console.log(archieves);
     // console.log("testtest post-all");
     var cat = getUrlParam("cat");
-    $("."+cat).show();
+    if (cat){
+        $("."+cat).show();
+    }else{
+        $(".categories").show();
+    }
+
 </script>
