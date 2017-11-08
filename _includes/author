@@ -9,7 +9,7 @@
       {% assign author_name = author %}
     {% endif %}
   {% endif %}
-
+<!--
   {% if author.picture %}
     {% assign author_picture = author.picture %}
   {% else %}
@@ -28,4 +28,5 @@
       {% assign author_twitter = site.twitter_username %}
     {% endif %}
   {% endif %}
+  -->
 {% endif %}
