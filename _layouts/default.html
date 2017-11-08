@@ -7,7 +7,7 @@
 -->
 <html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
 {% include head.html %}
-
+{% include scripts.html %}
 <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {{ page.title | slugify }}">
 
 {% include skip-links.html %}
@@ -35,7 +35,7 @@
     </div>
 </div>
 
-{% include scripts.html %}
+
 
 </body>
 
