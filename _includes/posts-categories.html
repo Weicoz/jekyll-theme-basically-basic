@@ -1,12 +1,14 @@
 <div>
     {% for category in site.categories %}
-    <header class="section-title">
-        <h2>{{ category | first }} | {{ category | last | size }}</h2>
-    </header>
-    <div class="entries">
-        {% for post in category.last %}
-        {% include entry.html %}
-        {% endfor %}
+    <div class="{{ category | first }}" id="{{ category | first }}">
+        <header class="section-title">
+            <h2>{{ category | first }} | {{ category | last | size }}</h2>
+        </header>
+        <div class="entries">
+            {% for post in category.last %}
+            {% include entry.html %}
+            {% endfor %}
+        </div>
     </div>
     {% endfor %}
 </div>
