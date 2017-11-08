@@ -7,15 +7,10 @@
         </a>
     </li>
     {% endif %}
-    <li>
-        <a href="/techonlogy">
-            <span class="label">techonlogy</span>
-        </a>
-    </li>
 
     {% for category in site.categories %}
     <li>
-        <a href="/techonlogy">
+        <a href="/{{ category | first }}">
             <span class="label">{{ category | first }} | {{ category | last | size }}</span>
         <a/>
     </li>
