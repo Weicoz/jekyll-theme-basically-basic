@@ -19,5 +19,10 @@
     // var archieves = data[curTag];
     // console.log(archieves);
     // console.log("testtest post-all");
-
+    var cat = getUrlParam("cat");
+    if (cat != "") {
+        $("." + cat).show();
+    } else {
+        $(".categories").show();
+    }
 </script>
