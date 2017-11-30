@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Sample Post
+title: Sample Post 页面格式
 description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
 categories: ['test','techonlogy']
-modified: 2014-12-24
+modified: 2017-11-30
 ---
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
@@ -89,6 +89,10 @@ Make any link standout more when applying the `.btn` class.
 ```html
 <a href="#" class="btn btn-success">Success Button</a>
 ```
+
+{% highlight ruby linenos %}
+<?php echo "高亮代码"; ?>   //高亮代码
+{% endhighlight %}
 
 <div markdown="0"><a href="#" class="btn">Primary Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-success">Success Button</a></div>
