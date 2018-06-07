@@ -60,18 +60,29 @@
             display: block;
             border: 1px solid #888888;
             float: right;
-            width: 198px;
+            width: 200px;
         }
         .search ul.search_list{
             padding: 0;
             background: white;
             float: right;
+            border: 1px solid #888888;
+            min-width: 198px;
+            box-shadow: 1px 1px 5px #888888;
+            max-width: 1900px;
+        }
+        .search li {
+            display: inline-block;
+            float: left;
+            white-space: nowrap;
         }
         .search a{
-            display: block;
+            display: inline-block;
             padding: 5px;
-            box-shadow: 1px 1px 5px #888888;
             min-width: 198px;
+            word-break: keep-all;
+            float: left;
+            text-decoration: none;
         }
     </style>
     {% if site.gems contains 'jekyll-feed' %}

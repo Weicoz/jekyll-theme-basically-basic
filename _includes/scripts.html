@@ -16,14 +16,24 @@
 <!--</script>-->
 
 <script>
-    $(function(){
-        $(".search_button").click(function(){
-            $(".search").toggle(400);
-        });
-    });
+
     var data = {
         page_url: '{{ page.url }}',
         escape: '{{ escape }}',
     }
     console.log(data);
+
+    $(function(){
+        $(".search_button").click(function(){
+            $(".search").toggle(400);
+        });
+        console.log("ajax start");
+        $.ajax({
+            url: '/search.xml',
+            dataType: "xml",
+            success:function(data){
+                console.log(data);
+           }
+        });
+    });
 </script>
