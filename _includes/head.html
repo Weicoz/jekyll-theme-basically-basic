@@ -20,7 +20,7 @@
             document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
         }
     </script>
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/stylesheets/main.css' | relative_url }}">
     {% if site.data.theme.google_fonts %}
     <link rel="stylesheet"
@@ -29,6 +29,16 @@
     <style type="text/css">
         .inner{
             max-width:1440px;
+        }
+        .site-title{
+            padding-right: calc(15vw + 1.75em);
+        }
+        .search{
+            display: none;
+        }
+        .search_logo{
+            position: absolute;
+            top: 0;
         }
     </style>
     {% if site.gems contains 'jekyll-feed' %}

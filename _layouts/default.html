@@ -13,6 +13,12 @@
 {% include skip-links.html %}
 
 <div class="sidebar-toggle-wrapper">
+    <div class="search_logo">
+        <i class="search_button fa fa-search fa-2x"></i>
+    </div>
+    <div class="search">
+        <input type="text" name="search" placeholder="Search Somethink" value="">
+    </div>
     <button class="toggle navicon-button larr" type="button">
         <span class="toggle-inner">
           <span class="sidebar-toggle-label">{{ site.data.theme.t.menu | default: 'Menu' }}</span>
