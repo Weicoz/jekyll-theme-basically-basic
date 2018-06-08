@@ -46,16 +46,18 @@
         var data = "";
         var title = "";
         var url = "";
-        $("#post_data > article").each(function(index,elm){
-            title = $(elm).find("title").text();
-            content = $(elm).find("content").text();
-            url = $(elm).find("url").text();
-            if (title.indexOf(keywork) != -1){
-                data += '<li><a href="'+url+'">'+title+'</a></li>';
-            }else if (content.indexOf(keywork) != -1){
-                data += '<li><a href="'+url+'">'+title+'</a></li>';
-            }
-        });
+        if (keywork != ""){
+            $("#post_data > article").each(function(index,elm){
+                title = $(elm).find("title").text();
+                content = $(elm).find("content").text();
+                url = $(elm).find("url").text();
+                if (title.indexOf(keywork) != -1){
+                    data += '<li><a href="'+url+'">'+title+'</a></li>';
+                }else if (content.indexOf(keywork) != -1){
+                    data += '<li><a href="'+url+'">'+title+'</a></li>';
+                }
+            });
+        }
         $(".search_list").html(data);
     }
 </script>
