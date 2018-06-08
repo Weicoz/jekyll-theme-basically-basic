@@ -72,6 +72,7 @@
             display: inline-block;
             float: left;
             white-space: nowrap;
+            transition: 300ms;
         }
         .search a{
             display: inline-block;
@@ -81,6 +82,13 @@
             float: left;
             text-decoration: none;
         }
+        .search li:hover {
+            background: #00848a;
+        }
+        .search li:hover a{
+            color:#fff;
+        }
+
     </style>
     {% if site.gems contains 'jekyll-feed' %}
     {% comment %}
