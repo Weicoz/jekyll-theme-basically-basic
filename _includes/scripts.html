@@ -30,10 +30,19 @@
         console.log("ajax start");
         $.ajax({
             url: '/search/index.html',
-            dataType: "xml",
+            dataType: "text",
             success:function(data){
-                console.log(data);
+                $(".search_data").html(data);
+                $(".search_data").html($("post_data").html());
+                var post_data = $("post_data")
+                $("post_data content").each(function(index,elm){
+                    $(elm).html($(elm).text());
+                })
            }
         });
     });
+
+    function search_keyword(){
+
+    }
 </script>
