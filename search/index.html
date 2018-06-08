@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
-<articles>
+<articles id="post_data">
 {% for post in site.posts %}
 <article>
     <title>{{ post.title }}</title>
     <url>{{ site.url }}{{ post.url }}</url>
     <date>{{ post.date | date_to_utc | date: '%Y-%m-%d'}}</date>
+    <content>{{ post.content }}</content>
 </article>
 {% endfor %}
 </articles>
