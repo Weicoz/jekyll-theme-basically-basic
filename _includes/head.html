@@ -70,16 +70,19 @@
             min-width: 198px;
             box-shadow: 1px 1px 5px #888888;
             max-width: 1900px;
+            max-height:600px;
+            overflow-y:auto;
+            text-overflow:ellipsis;
+            white-space: nowrap;
         }
         .search li {
             transition: 300ms;
-            display: inline-block;
+            display: block;
             float: left;
-            white-space: nowrap;
             width: 100%;
         }
         .search a{
-            display: inline-block;
+            display: block;
             padding: 10px;
             min-width: 198px;
             word-break: keep-all;
