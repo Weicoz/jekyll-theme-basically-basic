@@ -6,6 +6,9 @@
     li {list-style-type: none;}
     ul {margin: 0;}
     .inner{max-width:1440px;}
+    .sidebar-toggle-wrapper {
+        cursor: auto;
+    }
     .site-title{padding-right: calc(15vw + 1.75em);}
     .search_logo{
         transition: 300ms;
@@ -13,6 +16,9 @@
         margin: 0.9rem 0;
         padding: 0.3rem;
         font-size: 1.7rem;
+    }
+    .search_button{
+        cursor: pointer;
     }
     .search{
         transition: 300ms;
@@ -62,6 +68,7 @@
         word-break: keep-all;
         float: left;
         text-decoration: none;
+        width:100%;
     }
     .search li:hover {background: #00848a;}
     .search li:hover a{color:#fff;}
@@ -82,7 +89,7 @@
 
     $(function(){
         $(".search_button").click(function(){
-            $(".search").toggle();
+            $(".search").toggle(400);
         });
         $.ajax({
             url: '/search/index.html',
@@ -95,6 +102,15 @@
                 })
            }
         });
+
+        $("#keyword").focus(function(){
+            $(".search ul").show(400);
+        });
+
+        $("#keyword").blur(function(){
+            $(".search ul").hide(400);
+        });
+
     });
 
     function search_keyword(){
