@@ -26,77 +26,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family={% for font in site.data.theme.google_fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
     {% endif %}
-    <style type="text/css">
-        li {list-style-type: none;}
-        ul {margin: 0;}
-        .inner{
-            max-width:1440px;
-        }
-        .site-title{
-            padding-right: calc(15vw + 1.75em);
-        }
-        .search_logo{
-            transition: 300ms;
-            float: left;
-            margin: 0.9rem 0;
-            padding: 0.3rem;
-            font-size: 1.7rem;
-        }
-        .search{
-            transition: 300ms;
-            display: none;
-            position: absolute;
-            top: 4rem;
-            padding: 10px;
-            right: 0px;
-            font-size: 16px;
-            min-width: 220px;
-            line-height: 1.5;
-        }
-        .search input{
-            transition: 300ms;
-            line-height: 1.5;
-            padding: 10px;
-            display: block;
-            border: 1px solid #888888;
-            float: right;
-            width: 200px;
-        }
-        .search ul.search_list{
-            padding: 0;
-            background: white;
-            float: right;
-            border: 1px solid #888888;
-            min-width: 198px;
-            box-shadow: 1px 1px 5px #888888;
-            max-width: 1900px;
-            max-height:600px;
-            overflow-y:auto;
-            text-overflow:ellipsis;
-            white-space: nowrap;
-        }
-        .search li {
-            transition: 300ms;
-            display: block;
-            float: left;
-            width: 100%;
-        }
-        .search a{
-            display: block;
-            padding: 10px;
-            min-width: 198px;
-            word-break: keep-all;
-            float: left;
-            text-decoration: none;
-        }
-        .search li:hover {
-            background: #00848a;
-        }
-        .search li:hover a{
-            color:#fff;
-        }
 
-    </style>
     {% if site.gems contains 'jekyll-feed' %}
     {% comment %}
     Add Atom feed link if jekyll-feed plugin is enabled

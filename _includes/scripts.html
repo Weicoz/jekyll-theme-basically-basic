@@ -2,20 +2,77 @@
   {% include google-analytics.html %}
 {% endif %}
 
+<style type="text/css">
+    li {list-style-type: none;}
+    ul {margin: 0;}
+    .inner{max-width:1440px;}
+    .site-title{padding-right: calc(15vw + 1.75em);}
+    .search_logo{
+        transition: 300ms;
+        float: left;
+        margin: 0.9rem 0;
+        padding: 0.3rem;
+        font-size: 1.7rem;
+    }
+    .search{
+        transition: 300ms;
+        display: none;
+        position: absolute;
+        top: 4rem;
+        padding: 0.7rem;
+        right: 0px;
+        font-size: 0.9rem;
+        min-width: 220px;
+        line-height: 1.5;
+    }
+    .search input{
+        transition: 300ms;
+        line-height: 1.5;
+        padding: 0.7rem;
+        display: block;
+        border: 1px solid #888888;
+        float: right;
+        width: 200px;
+    }
+    .search ul.search_list{
+        transition: 300ms;
+        padding: 0;
+        background: white;
+        float: right;
+        border: 1px solid #888888;
+        min-width: 198px;
+        box-shadow: 1px 1px 5px #888888;
+        max-width: 1900px;
+        max-height:600px;
+        overflow-y:auto;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .search li {
+        transition: 300ms;
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    .search a{
+        transition: 300ms;
+        display: block;
+        padding: 0.7rem;
+        min-width: 198px;
+        word-break: keep-all;
+        float: left;
+        text-decoration: none;
+    }
+    .search li:hover {background: #00848a;}
+    .search li:hover a{color:#fff;}
+
+</style>
+
 <script src="{{ '/assets/javascripts/jquery-1.12.1.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/javascripts/get.js' | relative_url }}"></script>
 <script async src="{{ '/assets/javascripts/main.js' | relative_url }}"></script>
 
-<!--<script>-->
-    <!--var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';-->
-    <!--var data = JSON.parse(dataStr);-->
-    <!--var curTag = getUrlParam("test");-->
-    <!--var archieves = data[curTag];-->
-    <!--console.log(archieves);-->
-    <!--console.log("testtest post-paginated");-->
-<!--</script>-->
-
-<script>
+<script type="text/javascripts">
 
     var data = {
         page_url: '{{ page.url }}',
@@ -27,7 +84,6 @@
         $(".search_button").click(function(){
             $(".search").toggle(400);
         });
-        console.log("ajax start");
         $.ajax({
             url: '/search/index.html',
             dataType: "text",
@@ -42,22 +98,27 @@
     });
 
     function search_keyword(){
-        var keywork = $("#keywork").val();
+        var keyword = $("#keyword").val();
+        keyword = keyword.replace(/(^\s*)|(\s*$)/g, "");
+
+        console.log(keyword);
+
         var data = "";
         var title = "";
         var url = "";
-        if (keywork != ""){
+        if (keyword != ""){
             $("#post_data > article").each(function(index,elm){
                 title = $(elm).find("title").text();
                 content = $(elm).find("content").text();
                 url = $(elm).find("url").text();
-                if (title.indexOf(keywork) != -1){
-                    data += '<li><a href="'+url+'">'+title+'</a></li>';
-                }else if (content.indexOf(keywork) != -1){
-                    data += '<li><a href="'+url+'">'+title+'</a></li>';
+                if (title.indexOf(keyword) != -1){
+                    data += '<li data-index="'+index+'"><a href="'+url+'" alt="'+title+'">'+title+'</a></li>';
+                }else if (content.indexOf(keyword) != -1){
+                    data += '<li data-index="'+index+'"><a href="'+url+'" alt="'+title+'">'+title+'</a></li>';
                 }
             });
         }
         $(".search_list").html(data);
     }
 </script>
+
