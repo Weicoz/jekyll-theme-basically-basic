@@ -72,7 +72,7 @@
 <script src="{{ '/assets/javascripts/get.js' | relative_url }}"></script>
 <script async src="{{ '/assets/javascripts/main.js' | relative_url }}"></script>
 
-<script type="text/javascripts">
+<script>
 
     var data = {
         page_url: '{{ page.url }}',
@@ -82,7 +82,7 @@
 
     $(function(){
         $(".search_button").click(function(){
-            $(".search").toggle(400);
+            $(".search").toggle();
         });
         $.ajax({
             url: '/search/index.html',
