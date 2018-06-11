@@ -1,7 +1,17 @@
-### JQuery模拟form POST提交
-```js
+---
+layout: post
+title: jquery模拟form表单post提交
+description: "jquery模拟form表单post提交"
+modified: 2018-06-07
+categories: ['js']
+tags: ['js']
+---
+
+
+### jquery模拟form表单post提交
+{% highlight js linenos %}
 /**
- * JQuery模拟form POST提交
+ * jquery模拟form表单post提交
  * Created by Steven Guo on 2016/3/22.
  */
 define(function(require , exports , module) {
@@ -26,4 +36,4 @@ define(function(require , exports , module) {
     module.exports.myPost = myPost;
 });
 
-```
+{% endhighlight %}

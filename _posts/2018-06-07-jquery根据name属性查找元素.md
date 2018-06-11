@@ -1,6 +1,15 @@
-### JQ根据 name 属性查找元素
+---
+layout: post
+title: jquery根据name属性查找元素
+description: "jquery根据name属性查找元素"
+modified: 2018-06-11
+categories: ['js']
+tags: ['js']
+---
 
-```js
+### jquery根据name属性查找元素
+
+{% highlight js linenos %}
 //选择所有含有id属性的div元素
 $("div[id]");
 
