@@ -31,4 +31,4 @@ $("input[name*='man']");
 //可以使用多个属性进行联合选择，该选择器是得到所有的含有id属性并且那么属性以man结尾的元素
 $("input[id][name$='man']");
 
-```
+{% endhighlight %}
