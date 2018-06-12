@@ -14,6 +14,7 @@ tags: ['js']
 *window.location.pathname*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.pathname); //输出：/topic/index
 {% endhighlight %}
@@ -23,6 +24,7 @@ alert(window.location.pathname); //输出：/topic/index
 *window.location.href*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.href); //输出：http://localhost:8086/topic/index?topicId=361
 {% endhighlight %}
@@ -32,6 +34,7 @@ alert(window.location.href); //输出：http://localhost:8086/topic/index?topicI
 *window.location.port*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.port); //输出：8086
 {% endhighlight %}
@@ -41,6 +44,7 @@ alert(window.location.port); //输出：8086
 *window.location.protocol*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.protocol); 则输出：http:
 {% endhighlight %}
@@ -54,6 +58,7 @@ alert(window.location.protocol); 则输出：http:
 *window.location.host*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.host); //输出：http:localhost:8086
 {% endhighlight %}
@@ -63,9 +68,11 @@ alert(window.location.host); //输出：http:localhost:8086
 *window.location.search*
 
 例：http://localhost:8086/topic/index?topicId=361
+
 {% highlight js linenos %}
 alert(window.location.search); //输出：?topicId=361
 {% endhighlight %}
+
 #### window.location
 
 属性 | 描述
