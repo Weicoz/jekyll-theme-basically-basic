@@ -89,7 +89,8 @@
 
     $(function(){
         $(".search_button").click(function(){
-            $(".search").toggle(400);
+            $(".search").toggle(200);
+            $(".search input").onfocus;
         });
         $.ajax({
             url: '/search/index.html',
@@ -107,6 +108,9 @@
             $(".search ul").show(400);
         });
 
+        $(".search").blur(function(){
+            $(".search").hide(400);
+        })
 
     });
 
