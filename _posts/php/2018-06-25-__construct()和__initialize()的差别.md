@@ -34,7 +34,7 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
 ```
 很明显初始化子类IndexAction的时候会调用自己的构造器，所以输出是'hello IndexAction'。
 但是将子类修改为
-
+```php
 {% highlight php linenos %}
 <?
     class IndexAction extends Action{
@@ -44,10 +44,10 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
         }
     }
 {% endhighlight %}
-
+```
 那么输出的是'hello Action'。因为子类IndexAction没有自己的构造器。
 如果我想在初始化子类的时候，同时调用父类的构造器呢?
-
+```php
 {% highlight php linenos %}
 <?
     class IndexAction extends Action{
@@ -58,10 +58,10 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
         }
     }
 {% endhighlight %}
-
+```
 这样就可以将两句话同时输出。
 当然还有一种办法就是在父类中调用子类的方法。
-
+```php
 {% highlight php linenos %}
 <?
     class Action{
@@ -81,7 +81,7 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
         }
     }
 {% endhighlight %}
-
+```
 这样也可以将两句话同时输出。
 
 而，这里子类中的方法hello()就类似于ThinkPHP中 **__initialize()**。
