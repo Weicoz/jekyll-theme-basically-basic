@@ -35,16 +35,21 @@
     }
     .search{
         transition:300ms;
-        display:none;
         position:absolute;
         top:4rem;
-        margin:0.7rem;
         right:0px;
         font-size:0.9rem;
         min-width:220px;
         line-height:1.5;
         max-height:35rem;
         overflow:hidden;
+    }
+    .search_show{
+        height:auto;
+        padding:0.7rem;
+    }
+    .search_hide{
+        padding:0;
         height:0;
     }
     .search input{
@@ -108,12 +113,12 @@
 
     $(function () {
         $(".search_button").click(function () {
-            if ($(".search").height() == 0) {
-                $(".search").css("height", "auto");
-                $(".search input").onfocus;
-            } else {
-                $(".search input").val("");
-                $(".search").css("height", "0");
+            if ($(".search").hasClass("search_show")){
+                $(".search").removeClass("search_show");
+                $(".search").addClass("search_hide");
+            }else{
+                $(".search").removeClass("search_hide");
+                $(".search").addClass("search_show");
             }
         });
         $.ajax({
