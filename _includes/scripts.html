@@ -14,7 +14,13 @@
         padding-right:calc(15vw + 1.75em);
         overflow:hidden;
     }
+    .section-title{
+        overflow:hidden;
+    }
     .site-title > a{
+        float:left;
+    }
+    .section-title > a{
         float:left;
     }
     .search_logo{
@@ -37,8 +43,8 @@
         font-size:0.9rem;
         min-width:220px;
         line-height:1.5;
-        max-height: 35rem;
-        overflow: hidden;
+        max-height:35rem;
+        overflow:hidden;
         height:0;
     }
     .search input{
@@ -102,12 +108,12 @@
 
     $(function () {
         $(".search_button").click(function () {
-            if ($(".search").height() > 0){
-                $(".search").css("height","auto");
+            if ($(".search").height() == 0) {
+                $(".search").css("height", "auto");
                 $(".search input").onfocus;
-            }else{
+            } else {
                 $(".search input").val("");
-                $(".search").css("height","0");
+                $(".search").css("height", "0");
             }
         });
         $.ajax({
