@@ -48,7 +48,7 @@ a{pointer-events:none;}
 - #### IE上运行firebug
 
 ```html
-<script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script>
+<!script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script!>
 ```
 
 ---
