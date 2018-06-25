@@ -2,7 +2,7 @@
 layout: post
 title: Sample Post 页面格式
 description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-categories: ['test','techonlogy']
+categories: ['template','techonlogy']
 modified: 2017-11-30
 ---
 
