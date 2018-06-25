@@ -47,9 +47,9 @@ a{pointer-events:none;}
 
 - #### IE上运行firebug
 
-{% highlight html linenos %}
+```html
 <script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script>
-{% endhighlight %}
+```
 
 ---
 
