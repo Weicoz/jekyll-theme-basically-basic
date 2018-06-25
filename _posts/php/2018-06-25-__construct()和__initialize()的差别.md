@@ -13,7 +13,7 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
 1. 类的初始化：子类如果有自己的构造函数（ **__construct()** ）,则调用自己的进行初始化，如果没有，则调用父类的构造函数进行自己的初始化。
 1. 当子类和父类都有 **__construct()** 函数的时候，如果要在初始化子类的时候同时调用父类的**__constrcut()**，则可以在子类中使用 **parent::__construct()** .
 如果我们写两个类，如下
-
+```php
 {% highlight php linenos %}
 <?
     class Action{
@@ -31,7 +31,7 @@ ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**
     $test = new IndexAction;
     //output --- hello IndexAction
 {% endhighlight %}
-
+```
 很明显初始化子类IndexAction的时候会调用自己的构造器，所以输出是'hello IndexAction'。
 但是将子类修改为
 
