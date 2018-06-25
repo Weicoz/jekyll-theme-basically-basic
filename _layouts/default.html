@@ -34,6 +34,11 @@
     <div class="inner">
         {% include navigation.html %}
         {% include contact-list.html %}
+        <div>
+            {% for tags in site.tags %}
+            <a href="{{ site.baseurl }}/tags?tags={{ tags | first }}">{{ tags | first }} | {{ tags | last | size }}</a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
