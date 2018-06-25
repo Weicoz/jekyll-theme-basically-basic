@@ -1,0 +1,5 @@
+<div class="tag-list">
+    {% for tags in site.tags %}
+    <a href="{{ site.baseurl }}/tags?tags={{ tags | first }}">{{ tags | first }} | {{ tags | last | size }}</a>
+    {% endfor %}
+</div>
