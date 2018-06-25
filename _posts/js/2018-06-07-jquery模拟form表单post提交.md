@@ -4,7 +4,7 @@ title: jquery模拟form表单post提交
 description: "jquery模拟form表单post提交"
 modified: 2018-06-07
 categories: ['js']
-tags: ['js']
+tags: ['js','jquery']
 ---
 
 

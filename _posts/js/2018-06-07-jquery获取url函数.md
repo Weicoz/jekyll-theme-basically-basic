@@ -4,7 +4,7 @@ title: jquery获取url函数
 description: "jquery获取url函数"
 modified: 2018-06-11
 categories: ['js']
-tags: ['js']
+tags: ['js','jquery']
 ---
 
 ### jquery获取url函数

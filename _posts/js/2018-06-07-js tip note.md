@@ -4,7 +4,7 @@ title: js tip note
 description: "js tip note"
 modified: 2018-06-11
 categories: ['js']
-tags: ['js']
+tags: ['js','jquery']
 ---
 ### js tip note
 

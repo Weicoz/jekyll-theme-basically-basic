@@ -2,8 +2,9 @@
 layout: post
 title: php mb_substr 截取字符串
 description: ""
-categories: ['php']
 modified: 2018-06-25
+categories: ['php']
+tags: ['php']
 ---
 
 ### php mb_substr 截取字符串

@@ -2,8 +2,9 @@
 layout: post
 title: php隐藏NOTICE提示
 description: ""
-categories: ['php']
 modified: 2018-06-25
+categories: ['php']
+tags: ['php']
 ---
 
 ### php隐藏NOTICE提示

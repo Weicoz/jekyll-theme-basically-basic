@@ -2,8 +2,9 @@
 layout: post
 title: __construct()和__initialize()的差别
 description: ""
-categories: ['php']
 modified: 2018-06-25
+categories: ['php']
+tags: ['php','thinkphp']
 ---
 
 ### __construct()和__initialize()的差别
