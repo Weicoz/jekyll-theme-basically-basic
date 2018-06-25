@@ -4,7 +4,7 @@ title: AutoHotKey简单入门
 description: ""
 modified: 2018-06-25
 categories: ['techonlogy']
-tags: ['techonlogy']
+tags: ['techonlogy','autohotkey']
 ---
 
 ### AutoHotKey简单入门

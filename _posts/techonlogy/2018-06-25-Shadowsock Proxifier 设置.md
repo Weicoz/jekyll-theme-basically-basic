@@ -4,7 +4,7 @@ title: Shadowsock Proxifier 设置
 description: ""
 modified: 2018-06-25
 categories: ['techonlogy']
-tags: ['techonlogy']
+tags: ['techonlogy','ssr']
 ---
 
 ### Shadowsock Proxifier 设置
