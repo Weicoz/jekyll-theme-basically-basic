@@ -1,7 +1,7 @@
 ---
 layout: post
 title: __construct()和__initialize()的差别
-description: "ThinkPHP中的 **__initialize()** 和类的构造函数 **__construct()**"
+description: ""
 categories: ['php']
 modified: 2018-06-25
 ---

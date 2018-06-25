@@ -1,11 +1,11 @@
 <div>
-    {% for category in site.categories %}
-    <div class="{{ category | first }} categories" id="{{ category | first }}" style="display: none;">
+    {% for tags in site.tags %}
+    <div class="{{ tags | first }} tags" id="{{ tags | first }}" style="display: none;">
         <header class="section-title">
-            <a style="text-decoration: none;" href="{{ site.baseurl }}/category?cat={{ category | first }}"><h2>{{ category | first }} | {{ category | last | size }}</h2></a>
+            <a href="{{ site.baseurl }}/category?tags={{ tags | first }}"><h2>{{ tags | first }} | {{ tags | last | size }}</h2></a>
         </header>
         <div class="entries">
-            {% for post in category.last %}
+            {% for post in tags.last %}
             {% include entry.html %}
             {% endfor %}
         </div>
@@ -13,10 +13,10 @@
     {% endfor %}
 </div>
 <script>
-    var cat = getUrlParam("cat");
-    if (cat != "") {
-        $("." + cat).show();
+    var tags = getUrlParam("tags");
+    if (tags != "") {
+        $("." + tags).show();
     } else {
-        $(".categories").show();
+        $(".tags").show();
     }
 </script>
